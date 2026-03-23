@@ -1,36 +1,55 @@
+import './styles/main.css';
+import './styles/header.css';
+import './styles/footer.css';
 import contactPage from './pages/contact.js'
-
-console.log('sasa');
-
-
+import createHomeContainer from './pages/home.js'
+import createMenuContainer from './pages/menu.js'
 
 
-document.querySelector('.header__buttons').addEventListener('click', (e) => {
-    if (!e.target.textContent || e.target.textContent == '') {
-        return
-    }
-
-    // clear the content container div
-    let contentContainer = document.querySelector('.content')
+(function () {
+    const contentContainer = document.querySelector('.content');
     contentContainer.innerHTML = '';
 
-    console.log();
+    document.querySelector('.header__buttons').addEventListener('click', (e) => {
+        if (!e.target.textContent || e.target.textContent == '') {
+            return
+        }
 
-    switch (e.target.textContent.toLowerCase()) {
-        case "home":
+        contentContainer.innerHTML = '';
+        console.log();
 
-            break;
-        case "menu":
+        switch (e.target.textContent.toLowerCase()) {
+            case "home":
+                createHomePage(contentContainer);
+                break;
+            case "menu":
+                createMenuPage(contentContainer);
+                break;
+            case "contact":
 
-            break;
-        case "contact":
-            console.log('hell');
+                //contactPage(contentContainer);
+                break;
 
-            contactPage(contentContainer);
-            break;
+            default:
+                break;
+        }
 
-        default:
-            break;
-    }
+    })
 
-})
+    createHomePage(contentContainer);
+})();
+
+
+function createHomePage(contentContainer) {
+    const home = createHomeContainer()
+    contentContainer.append(home.hero, home.aboutUs);
+}
+
+function createMenuPage(contentContainer) {
+
+    const menu = createMenuContainer();
+    contentContainer.append(menu.menuHeader, menu.menuContainer);
+}
+
+
+
