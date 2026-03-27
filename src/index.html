@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <header>
         <div class="header container">
@@ -23,61 +25,49 @@
     </header>
 
     <main class="content">
-        <div class="menu-header container">
-            <h1>Our Menu</h1>
+        <div class="content-header container">
+            <h1>Connect with us</h1>
         </div>
 
-        <div class="menu-container container">
+        <div class="contact container">
+            <div class="contact__reservations">
+                <p class="contact__header">Reservations & Inquiries</p>
 
-            <div class="menu-container__options">
-                <button type="button" class="menu-container__options--main-courses">Main Courses</button>
-                <button type="button" class="menu-container__options--appetizers">Appetizers</button>
-                <button type="button" class="menu-container__options--desserts">Desserts</button>
-                <button type="button" class="menu-container__options--beverages">Beverages</button>
+                <form action="#" method="post">
+                    <input type="text" id="name" name="name" placeholder="Name" required>
+
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+
+                    <div id="contact__datetime">
+                        <input type="date" id="date" name="date" placeholder="Date" required>
+
+                        <input type="time" id="time" name="time" placeholder="Time" required>
+                    </div>
+
+                    <textarea id="message" name="message" placeholder="Message" rows="4" cols="50"></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
             </div>
 
-            <div class="menu-container__selection">
-                <div class="menu-item">
-                    <img class="menu-item__image" src="./images/Menu/Mains/1.png" alt="Baked Sea Bass with Lemon and Herbs">
-                    <p class="menu-item__header"> 
-                        <span class="menu-item__name">Baked Sea Bass </span> <span class="menu-item__price">$24.99</span>
-                    </p>
-                    <p class="menu-item__description">Lorem ipsum dolor sit amet cons adipisicing elit. Reiciendis est corrupti, necessitatibus dignissimos voluptatem </p>
-                </div>
-                <div class="menu-item">
-                    <img class="menu-item__image" src="./images/Menu/Mains/2.png" alt="Calamari with Aioli ">
-                    <p class="menu-item__header"> 
-                        <span class="menu-item__name">Calamari with Aioli </span> <span class="menu-item__price">$20.99</span>
-                    </p>
-                    <p class="menu-item__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis est corrupti, necessitatibus dignissimos voluptatem </p>
-                </div>
-                <div class="menu-item">
-                    <img class="menu-item__image" src="./images/Menu/Mains/3.png" alt="Garlic Butter Shrimp">
-                    <p class="menu-item__header"> 
-                        <span class="menu-item__name">Garlic Butter Shrimp</span> <span class="menu-item__price">$22.99</span>
-                    </p>
-                    <p class="menu-item__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis est corrupti, necessitatibus dignissimos voluptatem </p>
-                </div>
-                <div class="menu-item">
-                    <img class="menu-item__image" src="./images/Menu/Mains/4.png" alt="Grilled Octopus">
-                    <p class="menu-item__header"> 
-                        <span class="menu-item__name">Grilled Octopus</span> <span class="menu-item__price">$26.99</span>
-                    </p>
-                    <p class="menu-item__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis est corrupti, necessitatibus dignissimos voluptatem </p>
-                </div>
-                <div class="menu-item">
-                    <img class="menu-item__image" src="./images/Menu/Mains/5.png" alt="Seafood Paella">
-                    <p class="menu-item__header"> 
-                        <span class="menu-item__name">Seafood Paella</span> <span class="menu-item__price">$28.99</span>
-                    </p>
-                    <p class="menu-item__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis est corrupti, necessitatibus dignissimos voluptatem </p>
-                </div>
-                <div class="menu-item">
-                    <img class="menu-item__image" src="./images/Menu/Mains/6.png" alt="Stuffed Squid">
-                    <p class="menu-item__header"> 
-                        <span class="menu-item__name">Stuffed Squid</span> <span class="menu-item__price">$25.99</span>
-                    </p>
-                    <p class="menu-item__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis est corrupti, necessitatibus dignissimos voluptatem </p>
+            <div class="contact__connect">
+                <p class="contact__header">Visit Us</p>
+                <div class="contact__information">
+                    <section>
+                        <h3>Our Location</h3>
+                        <p>The Rustic Olive</p>
+                        <p>123 Main Street, CityVille</p>
+                        <p>Address, Genare</p>
+                    </section>
+                    <section>
+                        <h3>Opening Hours</h3>
+                        <p>Monday - Friday: 11am - 10pm</p>
+                        <p>Saturday - Sunday: 10am - 11pm</p>
+                    </section>
+                    <section>
+                        <h3>Contact Information</h3>
+                        <p>Email: info@therusticolive.com</p>
+                        <p>Phone: (123) 456-7890</p>
+                    </section>
                 </div>
             </div>
         </div>
@@ -110,8 +100,9 @@
             </div>
 
         </div>
-        
+
     </footer>
 
 </body>
+
 </html>

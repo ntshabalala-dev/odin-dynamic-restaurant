@@ -8,7 +8,7 @@ import menuItem6 from '../images/Menu/Mains/6.png'
 export default function createMenuContainer() {
     // Create menu header
     const menuHeader = document.createElement('div');
-    menuHeader.className = 'menu-header container';
+    menuHeader.className = 'content-header container';
     menuHeader.innerHTML = '<h1>Our Menu</h1>';
 
     // Create menu container
@@ -19,10 +19,10 @@ export default function createMenuContainer() {
     const optionsDiv = document.createElement('div');
     optionsDiv.className = 'menu-container__options';
     optionsDiv.innerHTML = `
-    <button type="button" class="menu-container__options--main-courses">Main Courses</button>
-    <button type="button" class="menu-container__options--appetizers">Appetizers</button>
-    <button type="button" class="menu-container__options--desserts">Desserts</button>
-    <button type="button" class="menu-container__options--beverages">Beverages</button>
+    <a href="#" class="menu-container__options--main-courses">Main Courses</a>
+    <a href="#" class="menu-container__options--appetizers">Appetizers</a>
+    <a href="#" class="menu-container__options--desserts">Desserts</a>
+    <a href="#" class="menu-container__options--beverages">Beverages</a>
 `;
 
     // Create menu items data

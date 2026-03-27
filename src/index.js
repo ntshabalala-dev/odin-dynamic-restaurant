@@ -8,7 +8,7 @@ import createMenuContainer from './pages/menu.js'
 
 (function () {
     const contentContainer = document.querySelector('.content');
-    contentContainer.innerHTML = '';
+    //contentContainer.innerHTML = '';
 
     document.querySelector('.header__buttons').addEventListener('click', (e) => {
         if (!e.target.textContent || e.target.textContent == '') {
@@ -36,7 +36,7 @@ import createMenuContainer from './pages/menu.js'
 
     })
 
-    createHomePage(contentContainer);
+    //createHomePage(contentContainer);
 })();
 
 

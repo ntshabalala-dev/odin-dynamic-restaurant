@@ -27,11 +27,11 @@ body {
 
 #chef {
     width: 100%;
-    height: 500px;
+    height: 550px;
     /* 600px */
     border-radius: 0;
     object-fit: cover;
-    /* object-position: 50% 20%; */
+    object-position: 50% 20%;
 }
 
 .about-us {
@@ -71,11 +71,12 @@ body {
     flex-direction: column;
 }
 
-.menu-header {
+.content-header {
     display: flex;
     justify-content: center;
-    margin-top: .6rem;
-    margin-bottom: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 1.3rem;
+    text-transform: uppercase;
     /* margin: 2rem 0; */
 }
 
@@ -107,7 +108,7 @@ body {
 }
 
 .content__hero {
-    min-height: 45vh;
+    min-height: 60vh;
     background-image: url("../images/Home/bg1.jpg");
     background-size: cover;
     background-position: center;
@@ -128,4 +129,62 @@ body {
     text-align: center;
     font-size: 2.5rem;
     font-weight: 700;
+}
+
+.menu-container__options a {
+    font-size: 1.5rem;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+.contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+form>input,
+textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: solid black 1px;
+    border-radius: 0;
+}
+
+#contact__datetime>input {
+    padding: 0.5rem;
+}
+
+#contact__datetime {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: .5rem;
+}
+
+form>*:not(textarea) {
+    margin-bottom: 1rem;
+}
+
+.contact__information {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+form button {
+    background-color: white;
+    border: solid black 1px;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    width: 100%;
+    margin-top: .5rem;
+}
+
+.contact__header {
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-bottom: .5rem;
 }
