@@ -10,6 +10,11 @@ body {
     color: black;
     /* create theme for colors */
 
+
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100svh;
+
 }
 
 .container {
@@ -72,11 +77,11 @@ body {
 }
 
 .content-header {
-    display: flex;
-    justify-content: center;
+    text-align: center;
     margin-top: 2rem;
     margin-bottom: 1.3rem;
     text-transform: uppercase;
+    font-size: .9rem;
     /* margin: 2rem 0; */
 }
 
@@ -90,10 +95,8 @@ body {
 }
 
 /* HERO */
-
 .header {
     display: flex;
-    /* justify-content: center; */
     flex-direction: column;
     align-items: center;
     border: solid red 1px;
@@ -118,7 +121,6 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    /* gap: .9rem; */
 
     color: white;
 
@@ -140,8 +142,9 @@ body {
 
 .contact {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    grid-template-columns: 1fr;
+    /* gap: 1rem; */
+    margin-bottom: 1rem;
 }
 
 form>input,
@@ -187,4 +190,29 @@ form button {
     font-weight: 700;
     text-transform: uppercase;
     padding-bottom: .5rem;
+    text-align: center;
+}
+
+.contact__connect img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+/* Tablet/Desktop View: 2 Columns */
+@media (min-width: 600px) {
+    .contact {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .content-header {
+        font-size: 1rem;
+        /* margin: 2rem 0; */
+    }
+
+    .contact__information {
+        flex-direction: row;
+    }
 }

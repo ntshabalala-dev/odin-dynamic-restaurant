@@ -13,5 +13,12 @@
     border: solid black 1px;
     font-size: 1.2rem;
     cursor: pointer;
-    padding: 5px 3rem;
+    /* padding: 5px 3rem; */
+    padding: 5px;
+}
+
+@media (min-width: 600px) {
+    .header__buttons button {
+        padding: 5px 3rem;
+    }
 }

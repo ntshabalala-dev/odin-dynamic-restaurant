@@ -1,14 +1,14 @@
 import './styles/main.css';
 import './styles/header.css';
 import './styles/footer.css';
-import contactPage from './pages/contact.js'
+import createContactContainer from './pages/contact.js'
 import createHomeContainer from './pages/home.js'
 import createMenuContainer from './pages/menu.js'
 
 
 (function () {
     const contentContainer = document.querySelector('.content');
-    //contentContainer.innerHTML = '';
+    contentContainer.innerHTML = '';
 
     document.querySelector('.header__buttons').addEventListener('click', (e) => {
         if (!e.target.textContent || e.target.textContent == '') {
@@ -26,8 +26,7 @@ import createMenuContainer from './pages/menu.js'
                 createMenuPage(contentContainer);
                 break;
             case "contact":
-
-                //contactPage(contentContainer);
+                createContactPage(contentContainer);
                 break;
 
             default:
@@ -36,7 +35,7 @@ import createMenuContainer from './pages/menu.js'
 
     })
 
-    //createHomePage(contentContainer);
+    createHomePage(contentContainer);
 })();
 
 
@@ -51,5 +50,7 @@ function createMenuPage(contentContainer) {
     contentContainer.append(menu.menuHeader, menu.menuContainer);
 }
 
-
-
+function createContactPage(contentContainer) {
+    const contact = createContactContainer()
+    contentContainer.append(contact.contentHeader, contact.contactContainer);
+}
