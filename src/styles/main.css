@@ -52,15 +52,28 @@ body {
 
 .menu-container {
     display: flex;
-    justify-content: space-evenly;
-    margin-bottom: 1.2rem;
+    gap: .7rem;
+    flex-direction: column;
+    align-items: center;
+
+    padding-bottom: 1.5rem;
+    /* justify-content: space-evenly; */
+}
+
+.menu-container__options--section a {
+    text-align: center;
+}
+
+.menu-container__options--section {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
 }
 
 
 .menu-container__selection {
     display: grid;
-    grid-template-columns: repeat(2, 250px);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(1, 250px);
     gap: 2rem;
 }
 
@@ -73,7 +86,6 @@ body {
 .menu-container__options {
     display: flex;
     gap: 1rem;
-    flex-direction: column;
 }
 
 .content-header {
@@ -111,7 +123,7 @@ body {
 }
 
 .content__hero {
-    min-height: 60vh;
+    min-height: 50vh;
     background-image: url("../images/Home/bg1.jpg");
     background-size: cover;
     background-position: center;
@@ -121,16 +133,20 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
     color: white;
-
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
 }
 
 #content__hero-text {
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 700;
+}
+
+#content__hero-subtext {
+    text-align: center;
+    /* font-size: 1.25rem; */
+    margin-bottom: .5rem;
 }
 
 .menu-container__options a {
@@ -214,5 +230,29 @@ form button {
 
     .contact__information {
         flex-direction: row;
+    }
+
+    .menu-container__selection {
+        grid-template-columns: repeat(2, 250px);
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .menu-container {
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-bottom: 1.2rem;
+        align-items: start;
+    }
+
+    .menu-container__options {
+        flex-direction: column;
+    }
+
+    .menu-container__options--section a {
+        text-align: left;
+    }
+
+    #content__hero-text {
+        font-size: 2.5rem;
     }
 }

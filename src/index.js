@@ -5,7 +5,6 @@ import createContactContainer from './pages/contact.js'
 import createHomeContainer from './pages/home.js'
 import createMenuContainer from './pages/menu.js'
 
-
 (function () {
     const contentContainer = document.querySelector('.content');
     contentContainer.innerHTML = '';

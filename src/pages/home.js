@@ -8,6 +8,7 @@ export default function createHeroContainer() {
     heroText.setAttribute('id', 'content__hero-text');
     heroText.innerHTML = 'WELCOME TO THE<br> RUSTIC OLIVE';
     const heroSubText = document.createElement('p');
+    heroSubText.setAttribute('id', 'content__hero-subtext');
     heroSubText.textContent = 'Experience authentic Mediterranean flavors in a cozy, welcoming atmosphere';
     const heroButton = document.createElement('button');
     heroButton.textContent = "Make a reservation";

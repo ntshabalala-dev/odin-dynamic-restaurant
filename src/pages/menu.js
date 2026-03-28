@@ -19,10 +19,16 @@ export default function createMenuContainer() {
     const optionsDiv = document.createElement('div');
     optionsDiv.className = 'menu-container__options';
     optionsDiv.innerHTML = `
-    <a href="#" class="menu-container__options--main-courses">Main Courses</a>
-    <a href="#" class="menu-container__options--appetizers">Appetizers</a>
-    <a href="#" class="menu-container__options--desserts">Desserts</a>
-    <a href="#" class="menu-container__options--beverages">Beverages</a>
+    <div class="menu-container__options--section">
+        <a href="#" class="menu-container__options--main-courses">Mains</a>
+        <a href="#" class="menu-container__options--appetizers">Appetizers</a>
+    </div>
+
+    <!-- Desserts and Beverages -->
+    <div class="menu-container__options--section">
+        <a href="#" class="menu-container__options--desserts">Desserts</a>
+        <a href="#" class="menu-container__options--beverages">Beverages</a>
+    </div>
 `;
 
     // Create menu items data
