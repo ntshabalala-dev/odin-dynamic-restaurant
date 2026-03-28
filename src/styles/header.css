@@ -1,7 +1,16 @@
-#logo {
-    width: 170px;
-    height: auto;
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+.header__logo {
+    padding-top: .6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 
 .header__buttons {
     position: relative;
@@ -15,6 +24,11 @@
     cursor: pointer;
     /* padding: 5px 3rem; */
     padding: 5px;
+}
+
+#logo {
+    width: 170px;
+    height: auto;
 }
 
 @media (min-width: 600px) {

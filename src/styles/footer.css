@@ -2,8 +2,8 @@ footer {
     width: 100%;
     background-color: #2a2718;
     color: white;
-
-    padding: 1rem 0 .5rem 0;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
 }
 
 .footer__info {
@@ -21,7 +21,6 @@ footer .container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border: 1px solid red;
     gap: 1rem;
 }
 

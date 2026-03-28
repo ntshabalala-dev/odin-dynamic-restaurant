@@ -14,7 +14,7 @@ export default function createHeroContainer() {
     heroSubText.textContent = 'Experience authentic Mediterranean flavors in a cozy, welcoming atmosphere';
     const heroButton = document.createElement('button');
     heroButton.setAttribute('class', 'link-btn');
-    heroButton.textContent = "Make A Reservation";
+    heroButton.textContent = "Make a reservation";
 
     hero.append(heroText, heroSubText, heroButton);
 
