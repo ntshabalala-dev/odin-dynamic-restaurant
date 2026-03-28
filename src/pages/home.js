@@ -1,4 +1,6 @@
-import chefImage from '../images/Home/Chef.png'
+import foodImage1 from '../images/Home/1.png'
+import foodImage2 from '../images/Home/2.png'
+import foodImage3 from '../images/Home/3.png'
 
 export default function createHeroContainer() {
     const hero = document.createElement('div');
@@ -11,48 +13,43 @@ export default function createHeroContainer() {
     heroSubText.setAttribute('id', 'content__hero-subtext');
     heroSubText.textContent = 'Experience authentic Mediterranean flavors in a cozy, welcoming atmosphere';
     const heroButton = document.createElement('button');
-    heroButton.textContent = "Make a reservation";
+    heroButton.setAttribute('class', 'link-btn');
+    heroButton.textContent = "Make A Reservation";
 
     hero.append(heroText, heroSubText, heroButton);
 
     return {
         hero: hero,
-        aboutUs: createAboutUsContainer()
+        aboutUs: createMainContentContainer()
     };
 }
 
-function createAboutUsContainer() {
+function createMainContentContainer() {
     // Create the main container
-    const aboutUsContainer = document.createElement('div');
-    aboutUsContainer.className = 'about-us grid-container container';
+    const mainContentContainer = document.createElement('div');
+    mainContentContainer.className = 'home-page container';
 
-    // Create first grid item with chef image
-    const gridItem1 = document.createElement('div');
-    gridItem1.className = 'grid-item';
+    mainContentContainer.innerHTML = `
+        <div class="food-gallery">
+            <img src=${foodImage1} alt="Rice, eggs, and side items">
+            <img src=${foodImage2} alt="Skewered meatballs with herbs">
+            <img src=${foodImage3} alt="Noodles with eggs and meatballs">
+        </div>
+        <div class="home-page__text">
+            <h1 id="home-page__hero-text">A genuine fine-dining<br>experience awaits</h1>
+            <h2 id="home-page__hero-subtext">It's time to enjoy the finer things in life</h2>
+            <hr>
+            <p id="home-page__description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tempor, sapien id blandit
+                consectetur,
+                nibh tellus commodo libero, a blandit justo tortor vitae urna. Aenean non risus ac nisi placerat
+                pretium.
+                Suspendisse ac pellentesque augue. Pellentesque habitant morbi tristique senectus et netus et malesuada
+                fames ac turpis.
+            </p>
+            <a href="#" class="link-btn">Explore Menu</a>
+        </div>
+`;
 
-    const chefImg = document.createElement('img');
-    chefImg.id = 'chef';
-    chefImg.src = chefImage;
-    chefImg.alt = 'Chef';
-
-    gridItem1.appendChild(chefImg);
-
-    // Create second grid item with text content
-    const gridItem2 = document.createElement('div');
-    gridItem2.className = 'grid-item';
-
-    const heading = document.createElement('h1');
-    heading.textContent = 'About Us';
-
-    const paragraph = document.createElement('p');
-    paragraph.textContent = 'Welcome to The Rustic Olive, where traditional Mediterranean flavors meet modern culinary techniques. Our passion for authentic cuisine has been the cornerstone of our restaurant since 2018.';
-
-    gridItem2.appendChild(heading);
-    gridItem2.appendChild(paragraph);
-
-    // Assemble the structure and append to body
-    aboutUsContainer.appendChild(gridItem1);
-    aboutUsContainer.appendChild(gridItem2);
-
-    return aboutUsContainer;
+    return mainContentContainer;
 }
