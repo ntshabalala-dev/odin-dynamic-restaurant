@@ -61,6 +61,7 @@ body {
     width: 100%;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
 }
 
 #home-page__hero-text {
@@ -119,9 +120,7 @@ body {
     gap: .7rem;
     flex-direction: column;
     align-items: center;
-
     padding-bottom: 1.5rem;
-    /* justify-content: space-evenly; */
 }
 
 .menu-container__options--section a {
@@ -199,7 +198,6 @@ body {
 
 #content__hero-subtext {
     text-align: center;
-    /* font-size: 1.25rem; */
     margin-bottom: .5rem;
 }
 
@@ -213,7 +211,6 @@ body {
 .contact {
     display: grid;
     grid-template-columns: 1fr;
-    /* gap: 1rem; */
     margin-bottom: 1rem;
 }
 
@@ -332,4 +329,20 @@ form button {
         min-height: 35vh;
     }
 
+}
+
+/* Standard Laptops */
+@media screen and (min-width: 1270px) and (max-width: 1536px) {
+    #content__hero-text {
+        font-size: 3rem;
+    }
+
+    .content__hero {
+        min-height: 50vh;
+    }
+
+    .food-gallery img {
+        object-fit: cover;
+        height: 320px;
+    }
 }

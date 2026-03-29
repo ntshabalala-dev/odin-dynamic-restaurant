@@ -24,11 +24,6 @@ footer .container {
     gap: 1rem;
 }
 
-footer,
-header {
-    border: 1px solid black;
-}
-
 .footer__copyright p {
     text-align: center;
 }

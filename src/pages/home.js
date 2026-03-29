@@ -12,8 +12,10 @@ export default function createHeroContainer() {
     const heroSubText = document.createElement('p');
     heroSubText.setAttribute('id', 'content__hero-subtext');
     heroSubText.textContent = 'Experience authentic Mediterranean flavors in a cozy, welcoming atmosphere';
-    const heroButton = document.createElement('button');
+    const heroButton = document.createElement('a');
     heroButton.setAttribute('class', 'link-btn');
+    heroButton.setAttribute('id', 'hero-btn');
+    heroButton.setAttribute('href', '#');
     heroButton.textContent = "Make a reservation";
 
     hero.append(heroText, heroSubText, heroButton);
@@ -47,7 +49,7 @@ function createMainContentContainer() {
                 Suspendisse ac pellentesque augue. Pellentesque habitant morbi tristique senectus et netus et malesuada
                 fames ac turpis.
             </p>
-            <a href="#" class="link-btn">Explore Menu</a>
+            <a href="#" id="menu-btn" class="link-btn">Explore Menu</a>
         </div>
 `;
 

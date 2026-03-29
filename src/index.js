@@ -15,7 +15,6 @@ import createMenuContainer from './pages/menu.js'
         }
 
         contentContainer.innerHTML = '';
-        console.log();
 
         switch (e.target.textContent.toLowerCase()) {
             case "home":
@@ -27,11 +26,9 @@ import createMenuContainer from './pages/menu.js'
             case "contact":
                 createContactPage(contentContainer);
                 break;
-
             default:
                 break;
         }
-
     })
 
     createHomePage(contentContainer);
@@ -41,6 +38,7 @@ import createMenuContainer from './pages/menu.js'
 function createHomePage(contentContainer) {
     const home = createHomeContainer()
     contentContainer.append(home.hero, home.aboutUs);
+    registerHomePageHandlers(contentContainer);
 }
 
 function createMenuPage(contentContainer) {
@@ -77,5 +75,25 @@ function linkHelper() {
             // 2. Add the active class to the clicked tag
             this.classList.add('active');
         });
+    });
+}
+
+function registerHomePageHandlers(contentContainer) {
+    document.querySelector('main').addEventListener('click', (e) => {
+        const target = e.target;
+        if (target.matches('a')) {
+            switch (target.id) {
+                case 'menu-btn':
+                    contentContainer.innerHTML = '';
+                    createMenuPage(contentContainer);
+                    break;
+                case 'hero-btn':
+                    contentContainer.innerHTML = '';
+                    createContactPage(contentContainer);
+                    break;
+                default:
+                    break;
+            }
+        }
     });
 }
