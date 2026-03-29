@@ -42,11 +42,9 @@ function createHomePage(contentContainer) {
 }
 
 function createMenuPage(contentContainer) {
-
     const menu = createMenuContainer();
     contentContainer.append(menu.menuHeader, menu.menuContainer);
     linkHelper();
-
 }
 
 function createContactPage(contentContainer) {
